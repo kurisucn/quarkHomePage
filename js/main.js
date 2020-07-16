@@ -159,7 +159,8 @@ require(['jquery'], function ($) {
                             fn();
                         }
                     }, 700);
-                }, {
+                },
+                {
                     passive: true,
                 }
             );
@@ -172,7 +173,8 @@ require(['jquery'], function ($) {
                         y: touch.pageY - startPos.y,
                     };
                     (Math.abs(movePos.x) > 10 || Math.abs(movePos.y) > 10) && clearTimeout(timeout);
-                }, {
+                },
+                {
                     passive: true,
                 }
             );
@@ -180,7 +182,8 @@ require(['jquery'], function ($) {
                 'touchend',
                 function () {
                     clearTimeout(timeout);
-                }, {
+                },
+                {
                     passive: true,
                 }
             );
@@ -242,7 +245,8 @@ require(['jquery'], function ($) {
     var bookMarkFn = function (ele, options) {
         this.$ele = $(ele);
         this.options = {
-            data: [{
+            data: [
+                {
                     name: '精选',
                     url: 'choice()',
                     icon: 'icon/discover.png',
@@ -283,8 +287,13 @@ require(['jquery'], function ($) {
                     icon: 'icon/sspai.png',
                 },
                 {
-                    name: 'KurisuCat',
-                    url: 'https://www.kurisucat.cn',
+                    name: '微博',
+                    url: 'https://m.weibo.com',
+                    icon: 'icon/weibo.png',
+                },
+                {
+                    name: '帮助',
+                    url: 'https://h.kurisucat.cn/help.html',
                     icon: 'icon/website.png',
                 },
             ],
@@ -524,18 +533,19 @@ require(['jquery'], function ($) {
             var i = data.length - 1;
             var dom = $(
                 '<div class="list" data-url="' +
-                url +
-                '"><div class="img" style="background-image:url(' +
-                icon +
-                ')"></div><div class="text">' +
-                name +
-                '</div></div>'
+                    url +
+                    '"><div class="img" style="background-image:url(' +
+                    icon +
+                    ')"></div><div class="text">' +
+                    name +
+                    '</div></div>'
             );
             this.$ele.append(dom);
             dom.css({
                 marginTop: '60px',
                 opacity: '0',
-            }).animate({
+            }).animate(
+                {
                     marginTop: 0,
                     opacity: 1,
                 },
@@ -647,11 +657,11 @@ require(['jquery'], function ($) {
         url = url || location.href;
         var reg = new RegExp('(^|)' + param + '=([^&]*)(|$)');
         var tmp = param + '=' + value;
-        return url.match(reg) ?
-            url.replace(eval(reg), tmp) :
-            url.match('[?]') ?
-            url + '&' + tmp :
-            url + '?' + tmp;
+        return url.match(reg)
+            ? url.replace(eval(reg), tmp)
+            : url.match('[?]')
+            ? url + '&' + tmp
+            : url + '?' + tmp;
     };
 
     // 更改URL，去除后面的参数
@@ -701,7 +711,8 @@ require(['jquery'], function ($) {
                 top -
                 (ornamentInput.outerHeight() - inputBg.outerHeight()) / 2;
             anitInput.css({
-                transform: 'translateX(' +
+                transform:
+                    'translateX(' +
                     translateX +
                     'px) translateY(' +
                     translateY +
@@ -818,9 +829,9 @@ require(['jquery'], function ($) {
             $('.search-btn').html(
                 /^\b(((https?|ftp):\/\/)?[-a-z0-9]+(\.[-a-z0-9]+)*\.(?:com|net|org|int|edu|gov|mil|arpa|asia|biz|info|name|pro|coop|aero|museum|[a-z][a-z]|((25[0-5])|(2[0-4]\d)|(1\d\d)|([1-9]\d)|\d))\b(\/[-a-z0-9_:\@&?=+,.!\/~%\$]*)?)$/i.test(
                     wd
-                ) ?
-                '进入' :
-                '搜索'
+                )
+                    ? '进入'
+                    : '搜索'
             );
             escape(wd).indexOf('%u') < 0 ? $('.shortcut2').show() : $('.shortcut3').show();
             $.ajax({
@@ -969,7 +980,7 @@ require(['jquery'], function ($) {
                     sogou: 'https://m.sogou.com/web/searchList.jsp?keyword=%s',
                     doge: 'https://www.dogedoge.com/results?q=%s',
                     diy: settings.get('diyEngines'),
-                } [settings.get('engines')].replace('%s', text);
+                }[settings.get('engines')].replace('%s', text);
             }
         }, 1);
     }
@@ -978,7 +989,8 @@ require(['jquery'], function ($) {
     function choice() {
         // 构建HTML
         var data = {
-                常用: [{
+                常用: [
+                    {
                         hl: '百度',
                         shl: '百度一下你就知道',
                         img: 'baidu',
@@ -1111,7 +1123,8 @@ require(['jquery'], function ($) {
                         url: 'm.hupu.com',
                     },
                 ],
-                科技: [{
+                科技: [
+                    {
                         hl: '知乎',
                         shl: '知识分享社区',
                         img: 'zhihu',
@@ -1172,7 +1185,8 @@ require(['jquery'], function ($) {
                         url: 'www.v2ex.com',
                     },
                 ],
-                生活: [{
+                生活: [
+                    {
                         hl: '豆瓣',
                         shl: '一个神奇的社区',
                         img: 'douban',
@@ -1227,7 +1241,8 @@ require(['jquery'], function ($) {
                         url: 'enjoy.ricebook.com',
                     },
                 ],
-                工具: [{
+                工具: [
+                    {
                         hl: '豌豆荚设计',
                         shl: '发现最优美的应用',
                         img: 'wandoujia',
@@ -1266,7 +1281,7 @@ require(['jquery'], function ($) {
                 ],
             },
             html =
-            '<div class="page-bg"></div><div class="page-choice"><div class="page-content"><ul class="choice-ul">',
+                '<div class="page-bg"></div><div class="page-choice"><div class="page-content"><ul class="choice-ul">',
             tabHtml = '<li class="current">捷径</li>',
             contentHtml = `<li class="choice-cut swiper-slide">
 			<div class="list h2"><a class="flex-1 content weather" href="https://quark.sm.cn/s?q=天气"><div>访问中</div><div></div><div></div></a><a class="flex-right content trivia" style="background-image:linear-gradient(148deg, rgb(0, 188, 150) 2%, rgb(129, 239, 201) 98%)"><div class="hl back-hl">今日冷知识</div><div class="shl" style="text-align: center;left: 15px;right: 15px;font-size: 12px;"></div><div class="cmp-icon" style="right: 20px; bottom: 0px; width: 62px; height: 54px; background-image: url(https://gw.alicdn.com/L1/723/1578466791/b3/f4/94/b3f494c724631d436989a4b7569952df.png);"></div></a></div>
@@ -1305,8 +1320,8 @@ require(['jquery'], function ($) {
         // HTML添加到APP
         $('#app').append(
             html +
-            tabHtml +
-            '<span class="active-span"></span></ul><div class="choice-swipe"><ul class="swiper-wrapper"><div style="position:absolute;text-align:center;top:50%;width:100%;margin-top:-64px;color:#444">正在加载页面中...</div></ul></div><div class="bottom-close"></div></div></div>'
+                tabHtml +
+                '<span class="active-span"></span></ul><div class="choice-swipe"><ul class="swiper-wrapper"><div style="position:absolute;text-align:center;top:50%;width:100%;margin-top:-64px;color:#444">正在加载页面中...</div></ul></div><div class="bottom-close"></div></div></div>'
         );
 
         setTimeout(function () {
@@ -1476,7 +1491,8 @@ require(['jquery'], function ($) {
 
             // 今日份壁纸
             $.ajax({
-                url: 'https://jsonp.afeld.me/?callback=&url=https%3A%2F%2Fcn.bing.com%2FHPImageArchive.aspx%3Fformat%3Djs%26cc%3Djp%26idx%3D0%26n%3D1',
+                url:
+                    'https://jsonp.afeld.me/?callback=&url=https%3A%2F%2Fcn.bing.com%2FHPImageArchive.aspx%3Fformat%3Djs%26cc%3Djp%26idx%3D0%26n%3D1',
                 type: 'get',
                 dataType: 'jsonp',
                 success: function (res) {
@@ -1504,11 +1520,13 @@ require(['jquery'], function ($) {
             }
         })
         .longPress(() => {
-            var data = [{
+            var data = [
+                {
                     title: '搜索引擎',
                     type: 'select',
                     value: 'engines',
-                    data: [{
+                    data: [
+                        {
                             t: '夸克搜索',
                             v: 'quark',
                         },
@@ -1566,7 +1584,8 @@ require(['jquery'], function ($) {
                     title: '图标颜色',
                     type: 'select',
                     value: 'bookcolor',
-                    data: [{
+                    data: [
+                        {
                             t: '深色图标',
                             v: 'black',
                         },
@@ -1826,7 +1845,8 @@ require(['jquery'], function ($) {
                             'transition-duration': '0ms',
                         });
                     $('.ornament-input-group').css({
-                        transform: 'translate3d(0,' + Math.min((sliding / this.height) * 80, 30) + 'px,0)',
+                        transform:
+                            'translate3d(0,' + Math.min((sliding / this.height) * 80, 30) + 'px,0)',
                         'transition-duration': '0ms',
                     });
                     $('.bookmark')
