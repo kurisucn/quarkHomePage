@@ -1519,3 +1519,8 @@ html {
 .ghost {
     opacity: .1 !important;
 }
+
+.no_long_press_to_save_img {
+    pointer-events: none;
+    /* 禁止长按图片保存 */
+}

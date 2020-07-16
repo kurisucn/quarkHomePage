@@ -83,11 +83,11 @@ require(['jquery'], function ($) {
             // 加载LOGO
             if (that.get('logo')) {
                 $('.logo').html(
-                    '<img style="pointer-events:none;" src="https://s1.ax1x.com/2020/07/16/UDnCDI.png" />'
+                    '<img class="no_long_press_to_save_img" src="https://s1.ax1x.com/2020/07/16/UDnCDI.png" />'
                 );
             } else {
                 $('.logo').html(
-                    '<img style="pointer-events:none;" src="https://s1.ax1x.com/2020/07/16/UDnCDI.png">'
+                    '<img class="no_long_press_to_save_img" src="https://s1.ax1x.com/2020/07/16/UDnCDI.png">'
                 );
             }
             // 夜间模式 和 壁纸
