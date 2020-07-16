@@ -81,9 +81,9 @@ require(['jquery'], function ($) {
             $('.ornament-input-group').removeAttr('style');
             // 加载LOGO
             if (that.get('logo')) {
-                $(".logo").html('<img src="' + that.get('logo') + '" />');
+                $(".logo").html('<img src="https://s1.ax1x.com/2020/07/16/UDnCDI.png" />');
             } else {
-                $(".logo").html('<img src="./icon/google.png">');
+                $(".logo").html('<img src="https://s1.ax1x.com/2020/07/16/UDnCDI.png">');
             }
             // 夜间模式 和 壁纸
             var nightMode = {
