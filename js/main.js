@@ -89,7 +89,7 @@ require(['jquery'], function ($) {
             var nightMode = {
                 on: function () {
                     $("body").removeClass('theme-black theme-white').addClass('theme-white');
-                    $("body").css("background-image", "");
+                    //$("body").css("background-image", "");
                     $("#nightCss").removeAttr('disabled');
                 },
                 off: function () {

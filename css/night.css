@@ -12,8 +12,8 @@ body {
 }
 
 .bookmark .list {
-    -webkit-filter: brightness(60%);
-    filter: brightness(60%);
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
 }
 
 .bookmark .addbook .img svg {
@@ -59,14 +59,14 @@ body {
 }
 
 .emptyHistory {
-    -webkit-filter: invert(100%) brightness(60%);
-    filter: invert(100%) brightness(60%);
+    -webkit-filter: invert(100%) brightness(100%);
+    filter: invert(100%) brightness(100%);
     background-color: #ccc;
 }
 
 .suggestion li {
-    -webkit-filter: invert(100%) brightness(60%);
-    filter: invert(100%) brightness(60%);
+    -webkit-filter: invert(100%) brightness(100%);
+    filter: invert(100%) brightness(100%);
 }
 
 .suggestion li:active {
@@ -75,8 +75,8 @@ body {
 
 .shortcut3 li:not(:first-child),
 .empty-input {
-    -webkit-filter: brightness(60%);
-    filter: brightness(60%);
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
 }
 
 .theme-white .bookmark .list .text {
@@ -93,13 +93,13 @@ body {
 }
 
 .set-option .set-checkbox:checked+label:before {
-    -webkit-filter: brightness(60%);
-    filter: brightness(60%);
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
 }
 
 .set-option .set-checkbox+label::after {
-    -webkit-filter: brightness(60%);
-    filter: brightness(60%);
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
 }
 
 .set-option:active {
@@ -139,16 +139,16 @@ body {
 }
 
 .choice-cut .list {
-    -webkit-filter: brightness(60%);
-    filter: brightness(60%);
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
 }
 
 .choice-li img {
-    -webkit-filter: brightness(60%);
-    filter: brightness(60%);
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
 }
 
 .logo {
-    -webkit-filter: brightness(60%);
-    filter: brightness(60%);
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
 }
