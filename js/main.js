@@ -1480,7 +1480,7 @@ require(['jquery'], function ($) {
                 alert('已复制到剪贴板，请粘贴保存文件。');
                 oInput.remove();
             } else if (value === "import") {
-                var data = prompt("在这粘贴主页数据");
+                var data = prompt("在这粘贴主页数据。");
                 try {
                     data = JSON.parse(data);
                     store.set("bookMark", data.bookMark);
@@ -1513,7 +1513,7 @@ require(['jquery'], function ($) {
                 item = dom.parent().data("value"),
                 value = dom.val();
             if (item === "engines" && value === "diy") {
-                var engines = prompt("输入搜索引擎网址，（用“%s”代替搜索字词）");
+                var engines = prompt("输入搜索引擎网址（用“%s”代替搜索字词）");
                 console.log(engines);
                 if (engines) {
                     settings.set('diyEngines', engines);

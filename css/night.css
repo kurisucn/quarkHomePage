@@ -8,7 +8,12 @@
 }
 
 body {
-    background: #35363a;
+    font-size: 14px;
+    background: var(--bg);
+    background-size: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .bookmark .list {
