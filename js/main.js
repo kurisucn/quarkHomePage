@@ -240,9 +240,9 @@ require(['jquery'], function ($) {
                 "url": "https://www.zhihu.com",
                 "icon": "icon/zhihu.png"
             }, {
-                "name": "淘宝",
-                "url": "https://m.taobao.com",
-                "icon": "icon/taobao.png"
+                "name": "Github",
+                "url": "https://github.com",
+                "icon": "icon/github_octocat.png"
             }, {
                 "name": "贴吧",
                 "url": "https://tieba.baidu.com",
@@ -252,17 +252,13 @@ require(['jquery'], function ($) {
                 "url": "https://m.ithome.com",
                 "icon": "icon/ithome.png"
             }, {
-                "name": "网易",
-                "url": "https://3g.163.com",
-                "icon": "icon/netease.png"
+                "name": "少数派",
+                "url": "https://sspai.com/",
+                "icon": "icon/sspai.png"
             }, {
-                "name": "热榜",
-                "url": "https://tophub.today",
-                "icon": "icon/tophub.png"
-            }, {
-                "name": "导航",
-                "url": "https://www.pp93.com/m",
-                "icon": "icon/pp93.png"
+                "name": "KurisuCat",
+                "url": "https://www.kurisucat.cn",
+                "icon": "icon/website.png"
             }],
         };
         this.options = $.extend({}, this.options, options);
@@ -1344,10 +1340,10 @@ require(['jquery'], function ($) {
             "title": "设置壁纸",
             "value": "wallpaper"
         }, {
-            "title": "设置LOGO",
+            "title": "设置 LOGO",
             "value": "logo"
         }, {
-            "title": "恢复默认壁纸和LOGO",
+            "title": "恢复默认壁纸和 LOGO",
             "value": "delLogo"
         }, {
             "title": "图标颜色",
@@ -1365,7 +1361,7 @@ require(['jquery'], function ($) {
             "type": "checkbox",
             "value": "styleThin"
         }, {
-            "title": "夜间模式",
+            "title": "黑暗模式",
             "type": "checkbox",
             "value": "nightMode"
         }, {
@@ -1387,10 +1383,14 @@ require(['jquery'], function ($) {
             "value": "openurl",
             "description": "https://github.com/kurisucn/quarkHomePage"
         }, {
+            "title": "Github 原版",
+            "value": "openurl",
+            "description": "https://github.com/liumingye/quarkHomePage"
+        }, {
             "title": "关于主页",
             "description": "KurisuCat 魔改 | 当前版本：" + app.version
         }];
-        var html = '<div class="page-settings"><div class="set-header"><div class="set-back"></div><p class="set-logo">主页设置</p></div><ul class="set-option-from">';
+        var html = '<div class="page-settings"><div class="set-header"><div class="set-back"></div><p class="set-logo">设置</p></div><ul class="set-option-from">';
         for (var json of data) {
             if (json.type === 'hr') {
                 html += `<li class="set-hr"></li>`;
