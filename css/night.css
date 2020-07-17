@@ -2,7 +2,7 @@
  * 夜间模式
 */
 :root {
-    --bg: #282828;
+    --bg: #101010;
     --white: #888;
     --dark: #888;
 }
@@ -31,15 +31,15 @@ body {
 
 .page-search,
 .input-bg {
-    background: #282828;
+    background: #000000;
 }
 
 .bottom-row {
-    background: #252726;
+    background: #000000;
 }
 
 .search-from {
-    background: #252726;
+    background: #000000;
 }
 
 .search-input::-webkit-input-placeholder {
@@ -47,7 +47,7 @@ body {
 }
 
 .shortcut {
-    background: #1f2120;
+    background: #111111;
 }
 
 .shortcut .content ul {
@@ -117,7 +117,7 @@ body {
 
 /* 精选页面 */
 .page-choice .page-content {
-    background: #1f2120;
+    background: #111111;
 }
 
 .choice-li a div {
@@ -126,7 +126,7 @@ body {
 
 .choice-li a:active>div,
 .choice-ul li:active {
-    background: #181818;
+    background: #151515;
 }
 
 .choice-ul li {
