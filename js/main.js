@@ -1609,7 +1609,7 @@ require(['jquery'], function ($) {
                 },
                 {
                     title: '关于主页',
-                    description: 'KurisuCat 魔改 | 当前版本：' + app.version,
+                    description: 'KurisuCat 魔改 | 当前版本：1.6.0',
                 },
             ];
             var html =
