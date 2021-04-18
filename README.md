@@ -1,6 +1,8 @@
 ## QuarkHomePage Edited by KurisuCat
 
-仿夸克浏览器主页 Kurisu 修改
+仿夸克浏览器主页
+
+立即体验：https://h.kurisucat.cn
 
 # 魔改内容
 
