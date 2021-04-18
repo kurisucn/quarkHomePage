@@ -1,7 +1,7 @@
 importScripts('https://g.alicdn.com/kg/workbox/4.3.1/workbox-sw.js');
 // 缓存静态资源
 workbox.routing.registerRoute(
-    /([\/|.|\w|\s|-])*\.(?:png|gif|jpg|jpeg|webp|svg|ico|ttf|woff|woff2|eot|otf|css)/,
+    /([\/|.|\w|\s|-])*\.(?:png|gif|jpg|jpeg|webp|svg|ico|ttf|woff|js|woff2|eot|otf|css)/,
     new workbox.strategies.CacheFirst({
         cacheName: 'static-resources',
         plugins: [
@@ -17,7 +17,7 @@ workbox.routing.registerRoute(
 workbox.precaching.precacheAndRoute(
     [
         {
-            revision: '158946',
+            revision: '158947',
             url: 'index.html',
         },
     ],
