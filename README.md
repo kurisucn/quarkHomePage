@@ -4,6 +4,8 @@
 
 立即体验：https://h.kurisucat.cn
 
+https://h.kurisu.run （存放于个人服务器）
+
 # 魔改内容
 
 1. 增加“多吉搜索” 以及 “萌搜”。
